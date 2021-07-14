@@ -1,6 +1,6 @@
 import {
   MuiThemeProvider,
-  createMuiTheme,
+  createTheme,
   responsiveFontSizes,
   Container,
   Paper,
@@ -16,7 +16,7 @@ import Add from './screens/Add/Add'
 
 const App = () => {
   const theme = responsiveFontSizes(
-    createMuiTheme({
+    createTheme({
       typography: {
         fontFamily: '"Ubuntu"',
         color: {
@@ -27,7 +27,7 @@ const App = () => {
       },
       palette: {
         type: 'dark',
-        primary: { main: '#0A1931' },
+        primary: { main: '#032541' },
         secondary: { main: '#66DE93' },
         alternate: { main: '#161616' },
         body: { main: '#043359' },

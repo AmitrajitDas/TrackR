@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
   wrapper: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.body.main,
     padding: '2rem',
   },
 
@@ -14,5 +14,17 @@ export const useStyles = makeStyles((theme) => ({
 
   search: {
     marginTop: '5rem',
+  },
+
+  cssOutlinedInput: {
+    '&$cssFocused $notchedOutline': {
+      borderColor: `${theme.palette.secondary.main} !important`,
+    },
+  },
+
+  cssFocused: {},
+
+  notchedOutline: {
+    borderWidth: '1px',
   },
 }))

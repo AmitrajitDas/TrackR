@@ -16,8 +16,13 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position='static'>
         <Toolbar>
+          <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>
+            <Typography variant='h4' className={classes.title}>
+              TrackR
+            </Typography>
+          </Link>
           <Typography variant='h4' className={classes.title}>
-            TrackR
+            {' '}
           </Typography>
           <Button color='inherit'>Watchlist</Button>
           <Button color='inherit'>Watched</Button>
