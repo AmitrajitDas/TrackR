@@ -8,7 +8,11 @@ import {
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
+// components
 import Navbar from './components/Navbar/Navbar'
+
+// screens
+import Add from './screens/Add/Add'
 
 const App = () => {
   const theme = responsiveFontSizes(
@@ -26,6 +30,7 @@ const App = () => {
         primary: { main: '#0A1931' },
         secondary: { main: '#66DE93' },
         alternate: { main: '#161616' },
+        body: { main: '#043359' },
       },
     })
   )
@@ -34,8 +39,12 @@ const App = () => {
     <>
       <MuiThemeProvider theme={theme}>
         <Paper>
-          <Navbar />
-          <Router>Hi</Router>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route path='/add' component={Add} />
+            </Switch>
+          </Router>
         </Paper>
       </MuiThemeProvider>
     </>

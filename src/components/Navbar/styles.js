@@ -8,4 +8,9 @@ export const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+
+  link: {
+    color: theme.palette.alternate.main,
+    textDecoration: 'none',
+  },
 }))

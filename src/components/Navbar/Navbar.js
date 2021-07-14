@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { Link } from 'react-router-dom'
 import {
   AppBar,
   Toolbar,
@@ -7,7 +6,6 @@ import {
   Button,
   IconButton,
 } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
 
 import { useStyles } from './styles'
 
@@ -15,17 +13,19 @@ const Navbar = () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={classes.root}>
       <AppBar position='static'>
         <Toolbar>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant='h4' className={classes.title}>
             TrackR
           </Typography>
           <Button color='inherit'>Watchlist</Button>
           <Button color='inherit'>Watched</Button>
-          <Button variant='contained' color='secondary'>
-            +Add
-          </Button>
+          <Link to='/add' className={classes.link}>
+            <Button variant='contained' color='secondary'>
+              +Add
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
