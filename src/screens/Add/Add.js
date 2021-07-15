@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { TextField } from '@material-ui/core'
 
+import ResultCard from '../../components/ResultCard/ResultCard'
 import { searchAction } from '../../redux/actions/SearchAction'
 import { useStyles } from './styles'
 
@@ -53,7 +54,7 @@ const Add = () => {
       {movies && (
         <ul className={classes.results}>
           {movies.results &&
-            movies.results.map((movie) => <li>{movie.title}</li>)}
+            movies.results.map((movie) => <ResultCard movie={movie} />)}
         </ul>
       )}
     </div>
