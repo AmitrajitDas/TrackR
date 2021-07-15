@@ -8,7 +8,7 @@ const ResultCard = ({ movie }) => {
     <div className={classes.resultCard}>
       <Card className={classes.card}>
         <Grid container>
-          <Grid item sm={6}>
+          <Grid item xs={12} sm={6}>
             {movie.poster_path ? (
               <img
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
@@ -19,12 +19,12 @@ const ResultCard = ({ movie }) => {
               <div className={classes.fillerPoster}></div>
             )}
           </Grid>
-          <Grid item sm={6}>
+          <Grid item xs={12} sm={6}>
             <Grid container>
-              <Grid item sm={12}>
+              <Grid item xs={12} sm={12}>
                 <Typography variant='h5'>{movie.title}</Typography>
               </Grid>
-              <Grid item sm={12} className={classes.releaseDate}>
+              <Grid item xs={12} sm={12} className={classes.releaseDate}>
                 <Typography variant='body1'>
                   {movie.release_date && movie.release_date.substring(0, 4)}
                 </Typography>

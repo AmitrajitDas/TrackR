@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { TextField } from '@material-ui/core'
+import LinearProgress from '@material-ui/core/LinearProgress'
+import Alert from '@material-ui/lab/Alert'
 
 import ResultCard from '../../components/ResultCard/ResultCard'
 import { searchAction } from '../../redux/actions/SearchAction'
@@ -51,6 +53,14 @@ const Add = () => {
           }}
         ></TextField>
       </div>
+      {loading && (
+        <LinearProgress color='secondary' className={classes.loader} />
+      )}
+      {error && (
+        <Alert severity='error'>
+          There was a problem while fetching movies
+        </Alert>
+      )}
       {movies && (
         <ul className={classes.results}>
           {movies.results &&

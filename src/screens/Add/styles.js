@@ -32,4 +32,16 @@ export const useStyles = makeStyles((theme) => ({
   results: {
     marginTop: '5rem',
   },
+  loader: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+  alert: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
 }))
