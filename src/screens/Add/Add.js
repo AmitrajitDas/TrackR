@@ -1,21 +1,24 @@
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { TextField } from '@material-ui/core'
 
+import { searchAction } from '../../redux/actions/SearchAction'
 import { useStyles } from './styles'
 
 const Add = () => {
   const classes = useStyles()
+  const dispatch = useDispatch()
 
   const [searchTerm, setSearchTerm] = useState('')
+
+  const { loading, movies, error } = useSelector((state) => state.search)
 
   const formHandling = (e) => {
     e.preventDefault()
     setSearchTerm(e.target.value)
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-    )
-      .then((res) => res.json())
-      .then((data) => console.log(data))
+    dispatch(searchAction(e.target.value))
+
+    console.log(movies)
   }
 
   return (
