@@ -2,29 +2,39 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme) => ({
   resultCard: {
-    marginBottom: '2rem',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  posterWrapper: {
-    marginRight: '3rem',
+  card: {
+    margin: '1rem',
+    padding: '3rem',
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: '2rem',
+    width: '40rem',
   },
 
   poster: {
+    width: '13rem',
+    height: '20rem',
     borderRadius: '5px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
     color: 'transparent',
   },
   fillerPoster: {
     backgroundColor: '#dbdada',
-    width: '75px',
-    height: '113px',
+    width: '13rem',
+    height: '20rem',
     borderRadius: '5px',
     marginRight: '15px',
     display: 'block',
     color: 'transparent',
+  },
+  releaseDate: {
+    marginTop: '2rem',
+  },
+  button: {
+    marginTop: '10rem',
+    borderRadius: '2rem',
+    width: '20rem',
   },
 }))

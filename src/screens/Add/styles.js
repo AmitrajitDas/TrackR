@@ -14,6 +14,7 @@ export const useStyles = makeStyles((theme) => ({
 
   search: {
     marginTop: '5rem',
+    width: '50rem',
   },
 
   cssOutlinedInput: {

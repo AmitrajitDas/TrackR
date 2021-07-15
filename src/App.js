@@ -36,7 +36,7 @@ const App = () => {
   )
 
   return (
-    <>
+    <div className='app'>
       <MuiThemeProvider theme={theme}>
         <Paper>
           <Router>
@@ -47,7 +47,7 @@ const App = () => {
           </Router>
         </Paper>
       </MuiThemeProvider>
-    </>
+    </div>
   )
 }
 
