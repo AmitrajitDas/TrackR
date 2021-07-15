@@ -27,4 +27,8 @@ export const useStyles = makeStyles((theme) => ({
   notchedOutline: {
     borderWidth: '1px',
   },
+
+  results: {
+    marginTop: '5rem',
+  },
 }))

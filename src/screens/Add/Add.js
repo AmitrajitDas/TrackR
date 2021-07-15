@@ -10,6 +10,7 @@ const Add = () => {
   const dispatch = useDispatch()
 
   const [searchTerm, setSearchTerm] = useState('')
+  const [results, setResults] = useState('')
 
   const { loading, movies, error } = useSelector((state) => state.search)
 
@@ -17,8 +18,12 @@ const Add = () => {
     e.preventDefault()
     setSearchTerm(e.target.value)
     dispatch(searchAction(e.target.value))
-
     console.log(movies)
+    // if (!error) {
+    //   setResults(movies.results)
+    // } else {
+    //   setResults([])
+    // }
   }
 
   return (
@@ -45,6 +50,12 @@ const Add = () => {
           }}
         ></TextField>
       </div>
+      {movies && (
+        <ul className={classes.results}>
+          {movies.results &&
+            movies.results.map((movie) => <li>{movie.title}</li>)}
+        </ul>
+      )}
     </div>
   )
 }
