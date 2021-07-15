@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundColor: theme.palette.body.main,
-    padding: '2rem',
+    padding: '21.3rem',
   },
 
   inputWrapper: {
@@ -13,8 +13,8 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   search: {
-    marginTop: '5rem',
-    width: '50rem',
+    marginTop: '-10rem',
+    width: '70rem',
   },
 
   cssOutlinedInput: {

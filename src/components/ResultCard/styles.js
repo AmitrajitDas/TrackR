@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   card: {
-    margin: '1rem',
+    margin: '2rem',
     padding: '3rem',
     backgroundColor: theme.palette.primary.main,
     borderRadius: '2rem',
