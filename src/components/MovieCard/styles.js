@@ -6,9 +6,6 @@ export const useStyles = makeStyles((theme) => ({
     padding: '5rem',
   },
 
-  cardWrapper: {
-    marginTop: '2rem',
-  },
   poster: {
     width: '13rem',
     height: '20rem',
