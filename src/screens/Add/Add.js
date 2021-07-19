@@ -64,7 +64,9 @@ const Add = () => {
       {movies && (
         <ul className={classes.results}>
           {movies.results &&
-            movies.results.map((movie) => <ResultCard movie={movie} />)}
+            movies.results.map((movie, index) => (
+              <ResultCard key={index} movie={movie} />
+            ))}
         </ul>
       )}
     </div>

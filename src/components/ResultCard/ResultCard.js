@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Grid, Typography, Button, Card } from '@material-ui/core'
 
 import { addToWatchListAction } from '../../redux/actions/AddToWatchlistAction'
@@ -7,6 +7,11 @@ import { useStyles } from './styles'
 const ResultCard = ({ movie }) => {
   const classes = useStyles()
   const dispatch = useDispatch()
+
+  const { watchlistMovies } = useSelector((state) => state.watchlist)
+
+  let movieExists = watchlistMovies.id === movie.id
+  const addedToWatchlist = movieExists ? true : false
 
   const addToWatchList = () => {
     dispatch(addToWatchListAction(movie))
@@ -40,8 +45,9 @@ const ResultCard = ({ movie }) => {
                 <Button
                   color='secondary'
                   variant='contained'
-                  className={classes.button}
                   onClick={addToWatchList}
+                  disabled={addedToWatchlist}
+                  className={classes.button}
                 >
                   Add to Watchlist
                 </Button>
