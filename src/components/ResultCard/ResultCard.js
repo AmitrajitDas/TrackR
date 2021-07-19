@@ -10,7 +10,7 @@ const ResultCard = ({ movie }) => {
 
   const { watchlistMovies } = useSelector((state) => state.watchlist)
 
-  let movieExists = watchlistMovies.id === movie.id
+  let movieExists = watchlistMovies.find((item) => item.id === movie.id)
   const addedToWatchlist = movieExists ? true : false
 
   const addToWatchList = () => {
