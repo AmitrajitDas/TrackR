@@ -9,10 +9,10 @@ import {
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 // components
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar.jsx'
 
 // screens
-import Add from './screens/Add/Add'
+import Add from './screens/Add/Add.jsx'
 
 const App = () => {
   const theme = responsiveFontSizes(
