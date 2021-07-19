@@ -13,4 +13,10 @@ export const useStyles = makeStyles((theme) => ({
   cardWrapper: {
     marginTop: '2rem',
   },
+  alert: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
 }))
