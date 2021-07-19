@@ -5,7 +5,12 @@ export const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.body.main,
     padding: '21.3rem',
   },
-
+  header: {
+    marginTop: '-10rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   inputWrapper: {
     display: 'flex',
     alignItems: 'center',
@@ -13,7 +18,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   search: {
-    marginTop: '-10rem',
+    marginTop: '8rem',
     width: '70rem',
   },
 

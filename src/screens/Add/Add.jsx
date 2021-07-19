@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { TextField } from '@material-ui/core'
+import { TextField, Typography } from '@material-ui/core'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Alert from '@material-ui/lab/Alert'
 
@@ -31,6 +31,9 @@ const Add = () => {
 
   return (
     <div className={classes.wrapper}>
+      <Typography color='secondary' variant='h3' className={classes.header}>
+        Add to Watchlist
+      </Typography>
       <div className={classes.inputWrapper}>
         <TextField
           placeholder='Search for Movies'

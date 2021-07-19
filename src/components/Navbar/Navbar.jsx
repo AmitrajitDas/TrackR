@@ -24,9 +24,11 @@ const Navbar = () => {
           <Typography variant='h4' className={classes.title}>
             {' '}
           </Typography>
-          <Button color='inherit'>Watchlist</Button>
+          <Link to='/watchlist' className={classes.whiteLink}>
+            <Button color='inherit'>Watchlist</Button>
+          </Link>
           <Button color='inherit'>Watched</Button>
-          <Link to='/add' className={classes.link}>
+          <Link to='/add' className={classes.blackLink}>
             <Button variant='contained' color='secondary'>
               +Add
             </Button>

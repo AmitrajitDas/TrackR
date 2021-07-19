@@ -9,7 +9,11 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  link: {
+  whiteLink: {
+    color: '#fff',
+    textDecoration: 'none',
+  },
+  blackLink: {
     color: theme.palette.alternate.main,
     textDecoration: 'none',
   },
