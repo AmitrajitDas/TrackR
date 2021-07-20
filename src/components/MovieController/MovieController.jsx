@@ -6,13 +6,17 @@ import { useStyles } from './styles'
 
 const MovieController = ({ movie, type }) => {
   const classes = useStyles()
+  const [show, setShow] = useState(false)
+
   return (
-    <div className={classes.wrapper}>
-      <IconButton color='secondary'>
-        <VisibilityIcon />
-      </IconButton>
+    <div
+      className={classes.wrapper}
+      onMouseEnter={() => setShow((prev) => !prev)}
+      onMouseLeave={() => setShow((prev) => !prev)}
+    >
+      <IconButton color='secondary'>{show && <VisibilityIcon />}</IconButton>
       <IconButton color='secondary' style={{ color: 'red' }}>
-        <CancelIcon />
+        {show && <CancelIcon />}
       </IconButton>
     </div>
   )
