@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Grid, Typography, Button, Card } from '@material-ui/core'
 
-import { addToWatchListAction } from '../../redux/actions/AddToWatchlistAction'
+import { addToWatchListAction } from '../../redux/actions/WatchlistActions'
 import { useStyles } from './styles'
 
 const ResultCard = ({ movie }) => {

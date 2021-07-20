@@ -20,7 +20,7 @@ const Watchlist = () => {
       {watchlistMovies.length > 0 ? (
         <Grid container className={classes.cardWrapper}>
           {watchlistMovies.map((movie) => (
-            <Grid item xs={3}>
+            <Grid item xs={12} md={6} lg={3}>
               <MovieCard movie={movie} type='watchlist' />
             </Grid>
           ))}
