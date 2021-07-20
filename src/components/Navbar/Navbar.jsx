@@ -27,7 +27,9 @@ const Navbar = () => {
           <Link to='/watchlist' className={classes.whiteLink}>
             <Button color='inherit'>Watchlist</Button>
           </Link>
-          <Button color='inherit'>Watched</Button>
+          <Link to='/watched' className={classes.whiteLink}>
+            <Button color='inherit'>Watched</Button>
+          </Link>
           <Link to='/add' className={classes.blackLink}>
             <Button variant='contained' color='secondary'>
               +Add

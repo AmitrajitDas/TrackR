@@ -4,7 +4,10 @@ import { IconButton } from '@material-ui/core'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import CancelIcon from '@material-ui/icons/Cancel'
 
-import { removeFromWatchListAction } from '../../redux/actions/WatchlistActions'
+import {
+  removeFromWatchListAction,
+  addToWatchedAction,
+} from '../../redux/actions/WatchlistActions'
 import { useStyles } from './styles'
 
 const MovieController = ({ movie, type }) => {
@@ -18,7 +21,12 @@ const MovieController = ({ movie, type }) => {
       onMouseEnter={() => setShow((prev) => !prev)}
       onMouseLeave={() => setShow((prev) => !prev)}
     >
-      <IconButton color='secondary'>{show && <VisibilityIcon />}</IconButton>
+      <IconButton
+        color='secondary'
+        onClick={() => dispatch(addToWatchedAction(movie))}
+      >
+        {show && <VisibilityIcon />}
+      </IconButton>
       <IconButton
         color='secondary'
         style={{ color: 'red' }}

@@ -5,23 +5,21 @@ import Alert from '@material-ui/lab/Alert'
 import MovieCard from '../../components/MovieCard/MovieCard.jsx'
 import { useStyles } from './styles'
 
-const Watchlist = () => {
+const Watched = () => {
   const classes = useStyles()
-
-  const { watchlistMovies } = useSelector((state) => state.watchlist)
-
+  const { watchedMovies } = useSelector((state) => state.watchlist)
   return (
     <div className={classes.wrapper}>
       <div className={classes.headerWrapper}>
         <Typography variant='h3' color='secondary'>
-          My Watchlist
+          Watched
         </Typography>
       </div>
-      {watchlistMovies.length > 0 ? (
+      {watchedMovies ? (
         <Grid container className={classes.cardWrapper}>
-          {watchlistMovies.map((movie) => (
+          {watchedMovies.map((movie) => (
             <Grid item xs={12} md={6} lg={3}>
-              <MovieCard movie={movie} type='watchlist' />
+              <MovieCard movie={movie} type='watched' />
             </Grid>
           ))}
         </Grid>
@@ -34,4 +32,4 @@ const Watchlist = () => {
   )
 }
 
-export default Watchlist
+export default Watched

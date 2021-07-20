@@ -14,6 +14,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 // screens
 import Add from './screens/Add/Add.jsx'
 import Watchlist from './screens/Watchlist/Watchlist.jsx'
+import Watched from './screens/Watched/Watched.jsx'
 
 const App = () => {
   const theme = responsiveFontSizes(
@@ -45,6 +46,7 @@ const App = () => {
             <Switch>
               <Route path='/add' component={Add} />
               <Route path='/watchlist' component={Watchlist} />
+              <Route path='/watched' component={Watched} />
             </Switch>
           </Router>
         </Paper>
