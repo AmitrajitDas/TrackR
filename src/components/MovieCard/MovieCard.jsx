@@ -1,6 +1,6 @@
 import React from 'react'
-import {} from '@material-ui/core'
 
+import MovieController from '../MovieController/MovieController.jsx'
 import { useStyles } from './styles'
 
 const MovieCard = ({ movie, type }) => {
@@ -16,6 +16,8 @@ const MovieCard = ({ movie, type }) => {
       ) : (
         <div className={classes.fillerPoster}></div>
       )}
+
+      <MovieController movie={movie} type={type} />
     </div>
   )
 }
