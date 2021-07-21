@@ -3,6 +3,7 @@ import {
   REMOVE_FROM_WATCHLIST,
   ADD_TO_WATCHED,
   MOVE_TO_WATCHLIST,
+  MARKED_AS_WATCHED,
 } from '../constants/WatchConstants'
 
 export const watchlistReducer = (
@@ -37,6 +38,13 @@ export const watchlistReducer = (
           (movies) => movies.id !== action.payload.id
         ),
         watchlistMovies: [action.payload, ...(state.watchlistMovies || [])],
+      }
+    case MARKED_AS_WATCHED:
+      return {
+        ...state,
+        watchedMovies: state.watchedMovies.filter(
+          (movie) => movie.id !== action.payload
+        ),
       }
     default:
       return state
