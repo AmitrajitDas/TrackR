@@ -2,6 +2,7 @@ import {
   ADD_TO_WATCHLIST,
   REMOVE_FROM_WATCHLIST,
   ADD_TO_WATCHED,
+  MOVE_TO_WATCHLIST,
 } from '../constants/WatchConstants'
 
 export const addToWatchListAction = (movie) => async (dispatch, getState) => {
@@ -19,4 +20,8 @@ export const removeFromWatchListAction = (id) => async (dispatch) => {
 
 export const addToWatchedAction = (movie) => async (dispatch) => {
   dispatch({ type: ADD_TO_WATCHED, payload: movie })
+}
+
+export const moveToWatchlistAction = (movie) => async (dispatch) => {
+  dispatch({ type: MOVE_TO_WATCHLIST, payload: movie })
 }
