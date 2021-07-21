@@ -27,7 +27,7 @@ export const watchlistReducer = (
         watchlistMovies: state.watchlistMovies.filter(
           (movies) => movies.id !== action.payload.id
         ),
-        watchedMovies: [action.payload, ...state.watchedMovies],
+        watchedMovies: [action.payload, ...(state.watchedMovies || [])],
       }
     default:
       return state

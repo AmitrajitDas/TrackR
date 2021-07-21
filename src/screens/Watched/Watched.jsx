@@ -8,6 +8,7 @@ import { useStyles } from './styles'
 const Watched = () => {
   const classes = useStyles()
   const { watchedMovies } = useSelector((state) => state.watchlist)
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.headerWrapper}>
