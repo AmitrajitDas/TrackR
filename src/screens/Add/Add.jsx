@@ -60,9 +60,11 @@ const Add = () => {
         <LinearProgress color='secondary' className={classes.loader} />
       )}
       {error && (
-        <Alert severity='error'>
-          There was a problem while fetching movies
-        </Alert>
+        <div className={classes.alert}>
+          <Alert severity='error'>
+            There was a problem while fetching movies
+          </Alert>
+        </div>
       )}
       {movies && (
         <ul className={classes.results}>
