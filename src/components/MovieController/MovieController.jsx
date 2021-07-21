@@ -9,6 +9,7 @@ import {
   removeFromWatchListAction,
   addToWatchedAction,
   moveToWatchlistAction,
+  markedAsWatchedAction,
 } from '../../redux/actions/WatchlistActions'
 import { useStyles } from './styles'
 
@@ -45,7 +46,7 @@ const MovieController = ({ movie, type }) => {
         <>
           <IconButton
             color='secondary'
-            onClick={() => dispatch(addToWatchedAction(movie))}
+            onClick={() => dispatch(markedAsWatchedAction(movie.id))}
           >
             {show && <VisibilityOffIcon />}
           </IconButton>

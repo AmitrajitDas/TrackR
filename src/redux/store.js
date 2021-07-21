@@ -8,9 +8,15 @@ const middleware = [thunk]
 const watchlistFromStorage = localStorage.getItem('watchlist')
   ? JSON.parse(localStorage.getItem('watchlist'))
   : []
+const watchedFromStorage = localStorage.getItem('watched')
+  ? JSON.parse(localStorage.getItem('watched'))
+  : []
 
 const initialState = {
-  watchlist: { watchlistMovies: watchlistFromStorage },
+  watchlist: {
+    watchlistMovies: watchlistFromStorage,
+    watchedMovies: watchedFromStorage,
+  },
 }
 
 const store = createStore(
