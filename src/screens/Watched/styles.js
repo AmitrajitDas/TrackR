@@ -14,9 +14,10 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: '2rem',
   },
   alert: {
-    width: '100%',
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '22rem',
+    marginTop: '-17rem',
   },
 }))
