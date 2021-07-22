@@ -28,6 +28,11 @@ export const addToWatchedAction = (movie) => async (dispatch, getState) => {
   dispatch({ type: ADD_TO_WATCHED, payload: movie })
 
   localStorage.setItem(
+    'watchlist',
+    JSON.stringify(getState().watchlist.watchlistMovies)
+  )
+
+  localStorage.setItem(
     'watched',
     JSON.stringify(getState().watchlist.watchedMovies)
   )
@@ -35,6 +40,11 @@ export const addToWatchedAction = (movie) => async (dispatch, getState) => {
 
 export const moveToWatchlistAction = (movie) => async (dispatch, getState) => {
   dispatch({ type: MOVE_TO_WATCHLIST, payload: movie })
+
+  localStorage.setItem(
+    'watchlist',
+    JSON.stringify(getState().watchlist.watchlistMovies)
+  )
 
   localStorage.setItem(
     'watched',
