@@ -1,21 +1,35 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Grid, Typography, Button, Card } from '@material-ui/core'
 
-import { addToWatchListAction } from '../../redux/actions/WatchlistActions'
+import {
+  addToWatchListAction,
+  addToWatchedAction,
+} from '../../redux/actions/WatchlistActions'
 import { useStyles } from './styles'
 
 const ResultCard = ({ movie }) => {
   const classes = useStyles()
   const dispatch = useDispatch()
 
-  const { watchlistMovies } = useSelector((state) => state.watchlist)
+  const { watchlistMovies, watchedMovies } = useSelector(
+    (state) => state.watchlist
+  )
 
-  let movieExists =
+  let isWatchlisted =
     watchlistMovies && watchlistMovies.find((item) => item.id === movie.id)
-  const addedToWatchlist = movieExists ? true : false
+
+  let isWatched =
+    watchedMovies && watchedMovies.find((item) => item.id === movie.id)
+
+  const disabledWatchlist = isWatchlisted ? true : false
+  const disabledWatched = isWatched ? true : false
 
   const addToWatchList = () => {
     dispatch(addToWatchListAction(movie))
+  }
+
+  const addToWatched = () => {
+    dispatch(addToWatchedAction(movie))
   }
   return (
     <div className={classes.resultCard}>
@@ -43,15 +57,30 @@ const ResultCard = ({ movie }) => {
                 </Typography>
               </Grid>
               <Grid item sm={12}>
-                <Button
-                  color='secondary'
-                  variant='contained'
-                  onClick={addToWatchList}
-                  disabled={addedToWatchlist}
-                  className={classes.button}
-                >
-                  Add to Watchlist
-                </Button>
+                <Grid container spacing={5}>
+                  <Grid item sm={6}>
+                    <Button
+                      color='secondary'
+                      variant='contained'
+                      onClick={addToWatchList}
+                      disabled={disabledWatchlist}
+                      className={classes.button}
+                    >
+                      Add to Watchlist
+                    </Button>
+                  </Grid>
+                  <Grid item sm={6}>
+                    <Button
+                      color='secondary'
+                      variant='contained'
+                      onClick={addToWatched}
+                      disabled={disabledWatched}
+                      className={classes.button}
+                    >
+                      Add to Watched
+                    </Button>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>

@@ -35,6 +35,8 @@ export const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: '10rem',
     borderRadius: '2rem',
-    width: '20rem',
+    width: '10rem',
+    height: '2rem',
+    fontSize: '12px',
   },
 }))
