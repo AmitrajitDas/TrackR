@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar.jsx'
 
 // screens
+import Home from './screens/Home/Home'
 import Add from './screens/Add/Add.jsx'
 import Watchlist from './screens/Watchlist/Watchlist.jsx'
 import Watched from './screens/Watched/Watched.jsx'
@@ -44,6 +45,7 @@ const App = () => {
           <Router>
             <Navbar />
             <Switch>
+              <Route exact path='/' component={Home} />
               <Route path='/add' component={Add} />
               <Route path='/watchlist' component={Watchlist} />
               <Route path='/watched' component={Watched} />
