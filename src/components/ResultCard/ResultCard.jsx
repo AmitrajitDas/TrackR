@@ -21,7 +21,7 @@ const ResultCard = ({ movie }) => {
   let isWatched =
     watchedMovies && watchedMovies.find((item) => item.id === movie.id)
 
-  const disabledWatchlist = isWatchlisted ? true : false
+  const disabledWatchlist = isWatchlisted ? true : isWatched ? true : false
   const disabledWatched = isWatched ? true : false
 
   const addToWatchList = () => {

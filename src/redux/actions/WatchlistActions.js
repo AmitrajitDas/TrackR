@@ -15,8 +15,13 @@ export const addToWatchListAction = (movie) => async (dispatch, getState) => {
   )
 }
 
-export const removeFromWatchListAction = (id) => async (dispatch) => {
+export const removeFromWatchListAction = (id) => async (dispatch, getState) => {
   dispatch({ type: REMOVE_FROM_WATCHLIST, payload: id })
+
+  localStorage.setItem(
+    'watchlist',
+    JSON.stringify(getState().watchlist.watchlistMovies)
+  )
 }
 
 export const addToWatchedAction = (movie) => async (dispatch, getState) => {
@@ -28,10 +33,20 @@ export const addToWatchedAction = (movie) => async (dispatch, getState) => {
   )
 }
 
-export const moveToWatchlistAction = (movie) => async (dispatch) => {
+export const moveToWatchlistAction = (movie) => async (dispatch, getState) => {
   dispatch({ type: MOVE_TO_WATCHLIST, payload: movie })
+
+  localStorage.setItem(
+    'watched',
+    JSON.stringify(getState().watchlist.watchedMovies)
+  )
 }
 
-export const markedAsWatchedAction = (id) => async (dispatch) => {
+export const markedAsWatchedAction = (id) => async (dispatch, getState) => {
   dispatch({ type: MARKED_AS_WATCHED, payload: id })
+
+  localStorage.setItem(
+    'watched',
+    JSON.stringify(getState().watchlist.watchedMovies)
+  )
 }
