@@ -16,7 +16,7 @@ const Watched = () => {
           Watched
         </Typography>
       </div>
-      {watchedMovies ? (
+      {watchedMovies.length > 0 ? (
         <Grid container className={classes.cardWrapper}>
           {watchedMovies.map((movie) => (
             <Grid item xs={12} md={6} lg={3}>

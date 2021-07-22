@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: '5rem',
   },
   cardWrapper: {
-    marginTop: '2rem',
+    marginTop: '1rem',
   },
   alert: {
     display: 'flex',
