@@ -16,12 +16,10 @@
 
 ```
 npm i
-
 ```
 
 ### Run Locally
 
 ```
 npm start
-
 ```
