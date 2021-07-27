@@ -1,6 +1,6 @@
 # TrackR
 
-## MERN chat application using socket.io
+## Movie Watchlist Manager
 
 > A React app in which you can manage and shortlist movies you watched or planning to watch
 
@@ -16,12 +16,10 @@
 
 ```
 npm i
-
 ```
 
 ### Run Locally
 
 ```
 npm start
-
 ```
