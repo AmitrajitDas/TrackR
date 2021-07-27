@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: '3rem',
     backgroundColor: theme.palette.primary.main,
     borderRadius: '2rem',
-    width: '40rem',
+    width: '50rem',
   },
 
   poster: {

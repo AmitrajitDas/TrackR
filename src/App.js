@@ -2,7 +2,7 @@ import {
   MuiThemeProvider,
   createTheme,
   responsiveFontSizes,
-  Container,
+  CssBaseline,
   Paper,
 } from '@material-ui/core'
 
@@ -33,7 +33,9 @@ const App = () => {
         primary: { main: '#032541' },
         secondary: { main: '#66DE93' },
         alternate: { main: '#161616' },
-        body: { main: '#043359' },
+        background: {
+          default: '#043359',
+        },
       },
     })
   )
@@ -41,17 +43,16 @@ const App = () => {
   return (
     <div className='app'>
       <MuiThemeProvider theme={theme}>
-        <Paper>
-          <Router>
-            <Navbar />
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/add' component={Add} />
-              <Route path='/watchlist' component={Watchlist} />
-              <Route path='/watched' component={Watched} />
-            </Switch>
-          </Router>
-        </Paper>
+        <CssBaseline />
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/add' component={Add} />
+            <Route path='/watchlist' component={Watchlist} />
+            <Route path='/watched' component={Watched} />
+          </Switch>
+        </Router>
       </MuiThemeProvider>
     </div>
   )

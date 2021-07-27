@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: '15rem',
-    backgroundColor: theme.palette.body.main,
   },
 
   intro: {},

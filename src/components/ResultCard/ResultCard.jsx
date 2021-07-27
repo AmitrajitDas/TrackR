@@ -57,7 +57,7 @@ const ResultCard = ({ movie }) => {
                 </Typography>
               </Grid>
               <Grid item sm={12}>
-                <Grid container spacing={5}>
+                <Grid container spacing={8} className={classes.buttonWrapper}>
                   <Grid item sm={6}>
                     <Button
                       color='secondary'
