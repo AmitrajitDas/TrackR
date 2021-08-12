@@ -34,7 +34,7 @@ const App = () => {
         secondary: { main: '#66DE93' },
         alternate: { main: '#161616' },
         background: {
-          default: '#043359',
+          default: '#008dff',
         },
       },
     })
